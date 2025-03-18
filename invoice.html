@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="invoice.js" defer></script> 
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #003e7d;
+            padding: 15px;
+        }
+
+        .navbar img.navlogo {
+            width: 150px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 20px;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 100vh;
+            background-color: #f4f4f9;
+        }
+
+        .Invoice {
+            background-color: rgb(167, 167, 167);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+        }
+
+        h1, h3 {
+            font-family: 'Sans-Serif', sans-serif;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        #product-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #product-list ul li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 2px solid #000000;
+        }
+
+        #product-list ul li img {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        #product-list ul li p {
+            margin: 0;
+            font-size: 16px;
+            color: #000000;
+        }
+
+        #total-cost, #tax-amount {
+            font-weight: bold;
+            font-size: 20px;
+            color: #000000;
+        }
+
+        .button-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        button {
+            background-color: #242526;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        button#cancelBtn {
+            background-color: #b23b3b;
+        }
+
+        button#cancelBtn:hover {
+            background-color: #a12e2e;
+        }
+
+        .footer {
+            background-color: #003f7e;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 100%;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="navbar">
+        <a href="Index.html"><img src="../Resources/logo.png" class="navlogo" alt="Company Logo"></a>
+        <a href="#About_us">About</a>
+        <a href="mailto:2203014@utech.edu.jm" target="_blank">Contact Us</a>
+    </div>
+
+    
+    <div class="main">
+        <div class="Invoice">
+            <h2>Invoice</h2>
+
+            
+            <div id="product-list">
+                <h3>Order Summary</h3>
+                <ul id="selected-products"></ul> 
+            </div>
+
+            <h3>Subtotal: <span id="total-cost">$0</span></h3>
+            <h3>Tax (7%): <span id="tax">$0</span></h3>
+            <h3>Total: <span id="final-total">$0</span></h3>
+            
+            
+            <div class="button-container">
+                <button id="checkoutBtn" onclick="confirmPurchase()">CheckOut</button>
+                <button id="cancelBtn" onclick="window.location.href = 'product_page.html'">Cancel</button>
+                <button id="exitBtn" onclick="window.location.href = 'login.html'">Exit</button>
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    
+    <div class="footer">
+        <footer>
+            <div class="footer-links">
+                <h4>Links</h4><br>
+                <a href="mailto:2203014@utech.edu.jm" target="_blank">Contact Us</a>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <a href="https://www.instagram.com/_._drizz_._/?hl=en" target="_blank">Instagram</a>
+            </div>
+
+        <p>&copy; 2025 URBAN SOLES. All rights reserved.</p>
+        </div>
+</body>
+</html>

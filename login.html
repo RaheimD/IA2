@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number 2</title>
+    
+    <script src ="javascript.js"></script>
+    <style>
+        .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; 
+        background-image: url('../Resources/loginbg.png');
+        background-size: cover;
+        background-position: center;
+        }
+
+        .header-logo {
+                position: absolute;
+                left: 20px;
+                top: 20px;
+                height: 100px;
+            }
+
+        .container {
+        width: 40%; 
+        background-color: rgb(255, 255, 255);
+        opacity: 70%;
+        padding: 20px;
+        border: 1px solid #000000;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+        border-radius: 10px;
+        box-sizing: border-box; 
+        }
+
+
+        .required::after {
+        content: "*";
+        color: red;
+        }
+
+
+        input {
+        width: 100%;
+        opacity: 100%; 
+        box-sizing: border-box; 
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: whitesmoke;
+        border: 1px solid #ccc;
+        }
+
+
+        label {
+        margin: 10px 0;
+        display: block;
+        }
+
+        button {
+        width: 100%; 
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        background-color: #0066cc;
+        color: white;
+        border: none;
+        cursor: pointer;
+        }
+
+        button:hover {
+        background-color: #0055aa;
+        }
+
+
+        a {
+        display: block;
+        margin-top: 10px;
+        color: #0066cc;
+        text-decoration: none;
+        }
+
+        a:hover {
+        text-decoration: underline;
+        }
+
+
+        .checkbox-label {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        }
+
+        .checkbox-label input {
+        margin-right: 10px;
+        }
+    </style>
+  
+
+</head>
+<body>
+    <img src="../Resources/logo.png" class="header-logo" alt="Company Logo">
+
+    <div class="wrapper">
+        <div class="container">
+            <h2>Login</h2>
+            <form action="" method="">
+                <label for="Username">Username <span class="required"></span></label>
+                <input type="text" id="Username" name="" size="40" required>
+                
+                <label for="Password">Password <span class="required"></span></label>
+                <input type="password" id="Password" name="" size="40" required>
+                <button type="button" onclick="login()" id = "sbutton">SUBMIT</button>
+                
+                <div class="checkbox-label">
+                    <input type="checkbox" name="remember">Remember me
+                </div>
+                
+                <a href="" target="blank">Lost your password?</a>
+            </form>
+        </div>
+    </div>
+  
+</body>
+</html>
+
+    
