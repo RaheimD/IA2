@@ -10,7 +10,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('../Resources/loginbg.png');
+  background-image: url('loginbg.png');
   background-size: cover;
   background-position: center;
   color: white;
